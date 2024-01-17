@@ -9,9 +9,9 @@ body {
 
 div.content {
     background-color: white;
-    margin: 60px 10% 80px 10%;
-    padding: 0 30px 30px 30px;
-    min-width: 320px;
+    margin: 40px 8px 40px 8px;
+    padding: 0 8px 20px 8px;
+    /*min-width: 320px; */
     box-shadow: 0 0 10px 10px rgba(0,0,0,0.2);
     overflow: visible;
 }
@@ -67,7 +67,7 @@ table.info {
     width: 100%; 
     color: white; 
     background-color:#6C829DC0; 
-    height: 15%; 
+    height: 50px; 
     
 }
 div.info {
@@ -77,11 +77,12 @@ div.info {
 table.info td{ /* this will only take the data cells into styling*/
     text-align: center;
     vertical-align: top;
-    font-size: 14px;
+    font-size: 12px;
 }
 table.info th {
     vertical-align: bottom;
     padding-bottom: 5px;
+    font-size: 14px;
 }
 img.info {
     display: block;
@@ -92,16 +93,17 @@ img.info {
     background-color: gray;
 }
 div.col{
-    width: 45%
+    width: 100%;
+    text-align: center;
 }
 div.col1 {
-    display: inline-block;  
-    margin-right: 10%;
+    display: inline-block;
+    
     
 
 }
 div.col2 {
-    float: right
+    
     
 
 }
@@ -127,7 +129,7 @@ table.instructions p.number{
     width: 25px;
     height: 25px;
     text-align: center;
-    padding-top: 3px;
+    padding-top: 5px;
     box-sizing: border-box; /* locks the size of the box*/
     border-radius: 50%;
     margin: 0
@@ -147,4 +149,49 @@ table.instructions td {
 table.instructions tr {
     height: 40px;
 }
+/* for desktop/laptop style */
+@media only screen and (min-width: 768px) {
+    div.content {
+        margin: 60px 10% 80px 10%;
+        padding: 0 30px 30px 30px;
+        min-width: 320px; 
+        /*box-shadow: 0 0 10px 10px rgba(0,0,0,0.2);
+        overflow: visible; 
+        These are not necessary here as they are the same as for mobile*/
+    }
+    table.info {
+        height: 15%; 
+        
+    }
+    table.info td{ /* this will only take the data cells into styling*/
+        font-size: 14px;
+    }
+    table.info th {
+        padding-bottom: 5px;
+    }
+    div.col{
+        width: 45%
+    }
+    div.col1 {
+          
+        margin-right: 10%;
+        
+    
+    }
+    div.col2 {
+        float: right
+        
+    
+    }
+}
+/*very large screens*/
+@media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 768px) {
+        div.content {
+            margin: 60px auto 80px auto;
+           width: 635px
+        }
+
+
+    
 
